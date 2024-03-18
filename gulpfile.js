@@ -1,6 +1,13 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const imagemin = require('gulp-imagemin');
+const uglify = require('gulp-uglify');
+
+function scripts() {
+    return gulp.src('./src/scripts/*.js')
+        .pipe(uglify())
+        .pipe(gulp.dest('./dist/js'));
+}
 
 function styles() { 
     return gulp.src('./src/styles/*scss')//com esta função nós apenas recuperamos os arquivos, ainda não estamos compilando o sass. Pra encadear essa compilação do sass aqui, temos que usar o Pipe
@@ -14,8 +21,9 @@ function images() {
     .pipe(gulp.dest('./dist/images')); 
 }
 
-exports.default = gulp.parallel(styles, images);
+exports.default = gulp.parallel(styles, images, scripts);
 
 exports.watch = function() {
     gulp.watch('./src/styles/*scss', gulp.parallel(styles)) //passamos os arquivos q serão observados e passamos como parâmetro as funções que serão executadas
+    gulp.watch('./src/scripts/*.js', gulp.parallel(scripts));
 }
