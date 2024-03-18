@@ -167,7 +167,10 @@
     </section>
 
     <section class="image-text-section image-text-section--image-full-width ">
-        <img src="./dist/images/fundo_rei_leao.png" alt="Rei Leão">
+        <picture>
+            <source media="(max-width: 768px)" srcset="./dist/images/fundo_rei_leao_celular.png">
+            <img src="./dist/images/fundo_rei_leao.png" alt="Rei Leão">
+        </picture>
         <div class="image-text-section__text_container image-text-section--image-full-width__text_container">
             <h2 class="title">Baixe filmes e séries</h2>
             <p class="text--big">
@@ -190,29 +193,31 @@
             </li>
             <li class="available-devices__list__item">
                 <img src="./dist/images/dispositivos/celular.png" alt="computador">
-                <h4 class="title--small">Celular</h4>
+                <h4 class="title--small">Celulares e tablets</h4>
                 <ul class="text">
-                    <li>Chrome OS</li>
-                    <li>MacOS</li>
-                    <li>PC Windows</li>
+                    <li>Tablets Amazon Fire</li>
+                    <li>Androids</li>
+                    <li>iPhone e iPad</li>
                 </ul>
             </li>
             <li class="available-devices__list__item">
                 <img src="./dist/images/dispositivos/tv.png" alt="computador">
                 <h4 class="title--small">TV</h4>
                 <ul class="text">
-                    <li>Chrome OS</li>
-                    <li>MacOS</li>
-                    <li>PC Windows</li>
+                    <li>Android TV</li>
+                    <li>Apple TV</li>
+                    <li>Chromecast</li>
+                    <li>LG e Samsung</li>
                 </ul>
             </li>
             <li class="available-devices__list__item">
                 <img src="./dist/images/dispositivos/videogames.png" alt="computador">
                 <h4 class="title--small">Vídeo Games</h4>
                 <ul class="text">
-                    <li>Chrome OS</li>
-                    <li>MacOS</li>
-                    <li>PC Windows</li>
+                    <li>PS4 e PS5</li>
+                    <li>Xbox One</li>
+                    <li>Xbox Serix X</li>
+                    <li>Xbox Serix S</li>
                 </ul>
             </li>
         </ul>
